@@ -1,0 +1,122 @@
+<html>
+
+<head>
+  <link rel="shortcut icon" href="../src/assets/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../src/assets/favicon.ico" type="image/x-icon">
+  <meta charset="utf-8">
+
+  <meta name="twitter:title" content="JKT48 Ship Rank Battle"/>
+  <meta name="twitter:url" content="https://kudapan-rumput.github.io/ship"/>
+  <meta name="twitter:site" content="@kudapan_rumput"/>
+  <meta name="twitter:creator" content="@kudapan_rumput"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <meta name="og:site_name" content="JKT48 Ship Rank Battle">
+  <meta name="og:description" content="Start the battle and check out your own JKT48 ship rank!">
+  <!--meta name="og:image" content="./src/assets/jkt48.png"-->
+  <meta property="og:image" content="https://kudapan-rumput.github.io/src/assets//homecard.png"/>
+  <title>JKT48 Ship Rank Battle</title>
+
+  <link rel="stylesheet" type="text/css" href="../src/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../src/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="./src/css/ship-styles.css">
+
+  <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+
+  <script src="../src/js/data.js"></script>
+
+  <script src="../src/js/html2canvas.min.js"></script>
+  <script src="../src/js/lz-string.min.js"></script>
+  <script src="../src/js/seedrandom.min.js"></script>
+  <script src="src/js/main.js"></script>
+</head>
+
+<body>
+
+<audio id="click-audio">
+    <source src="../src/assets/click.wav" type="audio/wav">
+    Your browser does not support the audio element.
+</audio>
+
+<div class="container">
+
+    <div style="position:fixed; background-position: right; background-size: cover; z-index: -1; bottom:0px; left:0px; right:0px; height:100%; background-image: url(../src/assets/bg-dim.png);">
+    
+    </div>
+
+    <div class="progress">
+        <span class="progressbattle"></span>
+        <div class="progressbar">
+            <div class="progressfill"><span class="progresstext"></span></div>
+        </div>
+    </div>
+
+    <div class="ship-sorter">
+        <img src="../src/assets/defaultL.jpg" class="top left sort image" style="grid-row: 1;">
+        <div class="top left sort text" style="grid-row: 2;"><p>Nama</p></div>
+        <img src="../src/assets/defaultL.jpg" class="bottom left sort image" style="grid-row: 4;">
+        <div class="bottom left sort text" style="grid-row: 5;"><p>Nama</p></div>
+
+        <div class="starting start button">JKT48 Ship Rank Battle<br><br>Click to Start!</div>
+        <div class="starting load button">Load <span></span></div>
+
+        <div class="loading button"><div></div><span>Loading...</span></div>
+
+        <div class="top sorting ship button" style="grid-row: span 1; grid-column:2;">Ship</div>
+        <div class="middle sort text" style="grid-row: span 2; width:auto"><p>X</p></div>
+        <div class="bottom sorting ship button" style="grid-row: span 1;">Ship</div>
+        <div class="middle sort text" style="grid-row: span 2; width:auto"><p>X</p></div>
+        <div class="sorting save button" style="grid-row: span 1;">Save Progress</div>
+
+        <div class="sorting tie button" style="grid-row: 7; grid-column:1;">Tie</div>
+        <div class="sorting undo button" style="grid-row: 7; grid-column:3">Undo</div>
+
+        <div class="finished save button">Generate Result URL</div>
+        <div class="finished getimg button">Generate Image</div>
+        <div class="finished list button">Generate Text List</div>
+
+        <img src="../src/assets/defaultR.jpg" class="top right sort image" style="grid-row: 1;">
+        <div class="top right sort text" style="grid-row: 2;"><p>Nama</p></div>
+        <img src="../src/assets/defaultR.jpg" class="bottom right sort image" style="grid-row: 4;">
+        <div class="bottom right sort text" style="grid-row: 5;"><p>Nama</p></div>
+
+    </div>
+
+    <div class="options"></div>
+    <br>
+    <div class="image selector">Display Images on Result: </div>
+    <div class="time taken"></div>
+    
+    <div class="finished twitter-button button"><a id="share-on-twitter" style="font-size: 10px; color:#FFFDFF;">Share Your Results On Twitter</a></div>
+
+    <div class="results"></div>
+
+    <div class="button" style="padding: 10px"><a href="../" style="color:#FFFDFF;">Member Rank Battle</a></div>
+    <br><br>
+    <div align="center">
+        <a class="twitter-share-button"
+        href="https://twitter.com/intent/tweet?url=https://kudapan-rumput.github.io/ship/&text=Check%20out%20your%20own%20version%20of%2048%ship%20rank%20on&hashtags=JKT48ShipRankBattle">
+        Tweet</a>
+        <a class="twitter-follow-button"
+        href="https://twitter.com/kudapan_rumput" data-show-count=false>
+        Follow @kudapan_rumput</a>
+    </div>
+
+    <div class="info">
+        <a href="https://twitter.com/kudapan_rumput/">Contact</a> | <a href="https://github.com/kudapan-rumput/">Github</a> | <a class="clearsave">Clear Save Data</a>
+        
+        <br><br>
+
+        <p><b>Keyboard controls:</b></p>
+        <p><b>During battle:</b> H/LeftArrow (pick left) J/DownArrow (undo) K/UpArrow (tie) L/RightArrow (pick right) S (save progress).</p>
+        <p><b>Before battle:</b> S/Enter (start sorting) L (load progress).
+        
+        <br><br>
+
+        <br>
+    </div>
+    <br><br>
+</div>
+</body>
+
+</html>

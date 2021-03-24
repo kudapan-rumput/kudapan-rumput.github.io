@@ -1,0 +1,112 @@
+<html>
+
+<head>
+  <link rel="shortcut icon" href="src/assets/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="src/assets/favicon.ico" type="image/x-icon">
+  <meta charset="utf-8">
+
+  <meta name="twitter:title" content="JKT48 Member Rank Battle"/>
+  <meta name="twitter:url" content="https://kudapan-rumput.github.io"/>
+  <meta name="twitter:site" content="@kudapan_rumput"/>
+  <meta name="twitter:creator" content="@kudapan_rumput"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <meta name="og:site_name" content="JKT48 Member Rank Battle">
+  <meta name="og:description" content="Start the battle and check out your own JKT48 member rank!">
+  <!--meta name="og:image" content="./src/assets/jkt48.png"-->
+  <meta property="og:image" content="https://kudapan-rumput.github.io/src/assets//homecard.png"/>
+  <title>JKT48 Member Rank Battle</title>
+
+  <link rel="stylesheet" type="text/css" href="src/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="src/css/styles.css">
+
+  <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+
+  <script src="src/js/data.js"></script>
+
+  <script src="src/js/html2canvas.min.js"></script>
+  <script src="src/js/lz-string.min.js"></script>
+  <script src="src/js/seedrandom.min.js"></script>
+  <script src="src/js/main.js"></script>
+</head>
+
+<body>
+
+<audio id="click-audio">
+    <source src="src/assets/click.wav" type="audio/wav">
+    Your browser does not support the audio element.
+</audio>
+
+<div class="container">
+
+    <div style="position:fixed; background-position: right; background-size: cover; z-index: -1; bottom:0px; left:0px; right:0px; height:100%; background-image: url(./src/assets/bg-dim.png);">
+    
+    </div>
+
+    <div class="progress">
+        <span class="progressbattle"></span>
+        <div class="progressbar">
+            <div class="progressfill"><span class="progresstext"></span></div>
+        </div>
+    </div>
+
+    <div class="sorter">
+        <img src="src/assets/defaultL.jpg" class="left sort image">
+
+        <div class="starting start button">JKT48 Member Rank Battle<br><br>Click to Start!</div>
+        <div class="starting load button">Load <span></span></div>
+
+        <div class="loading button"><div></div><span>Loading...</span></div>
+
+        <div class="sorting tie button">Tie</div>
+        <div class="sorting undo button">Undo</div>
+        <div class="sorting save button">Save Progress</div>
+
+        <div class="finished save button">Generate Result URL</div>
+        <div class="finished getimg button">Generate Image</div>
+        <div class="finished list button">Generate Text List</div>
+
+        <img src="src/assets/defaultR.jpg" class="right sort image">
+
+        <div class="left sort text"><p></p></div>
+        <div class="right sort text"><p></p></div>
+    </div>
+
+    <div class="options"></div>
+    <br>
+    <div class="image selector">Display Images on Result: </div>
+    <div class="time taken"></div>
+    
+    <div class="finished twitter-button button"><a id="share-on-twitter" style="font-size: 10px; color:#FFFDFF;">Share Your Results On Twitter</a></div>
+
+    <div class="results"></div>
+
+    <div class="button" style="padding: 10px"><a href="./ship" style="color:#FFFDFF;">Ship Rank Battle</a></div>
+    <br><br>
+    <div align="center">
+        <a class="twitter-share-button"
+        href="https://twitter.com/intent/tweet?url=https://kudapan-rumput.github.io/&text=Check%20out%20your%20own%20version%20of%2048%20member%20rank%20on&hashtags=JKT48MemberRankBattle">
+        Tweet</a>
+        <a class="twitter-follow-button"
+        href="https://twitter.com/kudapan_rumput" data-show-count=false>
+        Follow @kudapan_rumput</a>
+    </div>
+
+    <div class="info">
+        <a href="https://twitter.com/kudapan_rumput/">Contact</a> | <a href="https://github.com/kudapan-rumput/">Github</a> | <a class="clearsave">Clear Save Data</a>
+        
+        <br><br>
+
+        <p><b>Keyboard controls:</b></p>
+        <p><b>During battle:</b> H/LeftArrow (pick left) J/DownArrow (undo) K/UpArrow (tie) L/RightArrow (pick right) S (save progress).</p>
+        <p><b>Before battle:</b> S/Enter (start sorting) L (load progress).
+        
+        <br><br>
+
+        <br>
+    </div>
+    <br><br>
+</div>
+</body>
+
+</html>
